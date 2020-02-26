@@ -1,0 +1,21 @@
+{
+  "name": "Ferrum on Heroku example",
+  "description": "A barebones ferrum (headless chrome ruby driver) on Heroku example",
+  "repository": "https://github.com/coffeejunk/ferrum_heroku",
+  "logo": "https://raw.githubusercontent.com/route/ferrum/master/logo.svg?sanitize=true",
+  "keywords": ["ruby", "headless chrome", "google chrome"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "env": {
+    "BROWSER_PATH": {
+      "description": "path to the chrome executable",
+      "value": "/app/.apt/usr/bin/google-chrome"
+    }
+  }
+}
